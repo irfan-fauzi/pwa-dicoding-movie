@@ -12,8 +12,6 @@
     },
     "rules": {
       "quotes": ["error", "single"],
-    "semi": ["error", "never"],
-    "import/no-extraneous-dependencies": ["error", {"devDependencies": false, "optionalDependencies": false, "peerDependencies": false}]
-
+    "semi": ["error", "never"]
     }
 }
