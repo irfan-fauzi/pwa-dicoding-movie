@@ -4,18 +4,25 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start-dev": "webpack-dev-server --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
+    "lint": "eslint ./src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "irfan",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "regenerator-runtime": "^0.13.9"
+  },
   "devDependencies": {
     "@babel/core": "^7.15.8",
     "@babel/preset-env": "^7.15.8",
     "babel-loader": "^8.2.2",
     "copy-webpack-plugin": "^9.0.1",
     "css-loader": "^6.4.0",
-    "eslint": "^8.0.1",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.25.2",
     "html-webpack-plugin": "^5.4.0",
     "style-loader": "^3.3.0",
     "webpack": "^5.58.2",
