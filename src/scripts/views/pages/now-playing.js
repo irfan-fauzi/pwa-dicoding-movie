@@ -1,13 +1,18 @@
 /* eslint-disable linebreak-style */
+import TheMovieDbSource from '../../data/themoviedb-source'
+
 const NowPlaying = {
   async render() {
     return `
     <h2>Now playing page</h2>
     `
   },
-  // eslint-disable-next-line space-before-blocks
-  async afterRender(){
-    // setelah rendr
+
+  async afterRender() {
+    // eslint-disable-next-line no-unused-vars
+    const movie = await TheMovieDbSource.nowPlayingMovie()
+    // eslint-disable-next-line no-console
+    console.log(movie)
   },
 }
 

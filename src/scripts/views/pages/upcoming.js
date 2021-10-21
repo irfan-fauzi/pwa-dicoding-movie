@@ -1,4 +1,6 @@
 /* eslint-disable linebreak-style */
+import TheMovieDbSource from '../../data/themoviedb-source'
+
 const Upcoming = {
   async render() {
     return `
@@ -8,7 +10,8 @@ const Upcoming = {
 
   // eslint-disable-next-line no-empty-function
   async afterRender() {
-
+    const movies = await TheMovieDbSource.upcomingMovies()
+    console.log(movies)
   },
 }
 
