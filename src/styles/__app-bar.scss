@@ -43,10 +43,16 @@
         a {
           display: inline-block;
           text-decoration: none;
-          color: black;
+          color: rgba(136, 17, 233, 0.616);
           padding: 8px;
           margin-bottom: 5px;
           width: 100%;
+          text-transform: uppercase;
+          cursor: pointer;
+          transition: 0.3s;
+          &:hover {
+            color: blueviolet;
+          }
         }
       }
     }

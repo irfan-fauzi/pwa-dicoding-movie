@@ -83,10 +83,18 @@ body {
 .app-bar__navigation ul li a {
   display: inline-block;
   text-decoration: none;
-  color: black;
+  color: rgba(136, 17, 233, 0.616);
   padding: 8px;
   margin-bottom: 5px;
   width: 100%;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.app-bar__navigation ul li a:hover {
+  color: blueviolet;
 }
 
 .app-bar .open {
