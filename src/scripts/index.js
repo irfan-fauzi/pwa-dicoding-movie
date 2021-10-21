@@ -12,4 +12,10 @@ const app = new App({
   content: document.querySelector('#mainContent'),
 })
 
-app._initialAppShell()
+window.addEventListener('hashchange', () => {
+  app.renderPage()
+})
+
+window.addEventListener('load', () => {
+  app.renderPage()
+})
