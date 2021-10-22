@@ -3,9 +3,8 @@
 
 import CONFIG from '../../globals/config'
 
-const createMovieDetailTemplate = (movie) => {
-  `
-  <h2>${movie.title}</h2>
+const createMovieDetailTemplate = (movie) => `
+  <h2 class="movie__title">${movie.title}</h2>
   <img src=${CONFIG.BASE_IMAGE_URL + movie.poster_path} alt=${movie.title} class="movie__poster" />
   <div class="movie__info">
     <h3>Information</h3>
@@ -23,11 +22,10 @@ const createMovieDetailTemplate = (movie) => {
     <p>${movie.overview}</p>
   </div>
   `
-}
-const createMovieItemTemplate = (movie) => {
-  `
+
+const createMovieItemTemplate = (movie) => `
   <div class="movie-item">
-    <div class="movie-item__header">
+  <div class="movie-item__header">
       <img src=${movie.backdrop_path ? CONFIG.BASE_IMAGE_URL + movie.backdrop_path : 'https://picsum.photos/id/666/800/450?grayscale'} alt=${movie.title} class="movie-item__header__poster" />
       <div class="movie-item__header__rating">
         <p>☪<span class="movie-item__header__rating__score">${movie.vote_average}</span></p>
@@ -39,6 +37,5 @@ const createMovieItemTemplate = (movie) => {
     </div>
   </div>
   `
-}
 
 export { createMovieDetailTemplate, createMovieItemTemplate }

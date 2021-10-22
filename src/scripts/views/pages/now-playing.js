@@ -1,18 +1,25 @@
 /* eslint-disable linebreak-style */
 import TheMovieDbSource from '../../data/themoviedb-source'
+import { createMovieItemTemplate } from '../templates/template-creator'
 
 const NowPlaying = {
   async render() {
     return `
-    <h2>Now playing page</h2>
+    <div class="content">
+      <h2 class="content__heading">Now Playing in Cinema</h2>
+      <div class="movies" id="movies">
+      
+      </div>
+    </div>
     `
   },
 
   async afterRender() {
-    // eslint-disable-next-line no-unused-vars
-    const movie = await TheMovieDbSource.nowPlayingMovie()
-    // eslint-disable-next-line no-console
-    console.log(movie)
+    const movies = await TheMovieDbSource.nowPlayingMovie()
+    const moviesContainer = document.querySelector('#movies')
+    movies.forEach((movie) => {
+      moviesContainer.innerHTML += createMovieItemTemplate(movie)
+    })
   },
 }
 
