@@ -4,7 +4,7 @@
   "description": "free catalogue movie for you",
   "start_url": "/index.html",
   "display": "standalone",
-  "background_color": "#fffff",
+  "background_color": "#fff",
   "theme_color": "#d84315",
   "icons": [
     {
